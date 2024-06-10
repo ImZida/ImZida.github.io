@@ -6,10 +6,123 @@
         <title>为了能用上网页翻译复制pdf文字的网页</title>
     </head>
     <body>
-        <div>
-            $$
+        \chapter{Le groupe fondamental: g\'en\'eralit\'es}
+\label{V}
+% page: 105
+\marginpar{105}
+%
+
+\setcounter{section}{-1}
+\section{Introduction}
+
+Le pr\'esent S\'eminaire est la suite du S\'eminaire 1960. Nous
+r\'ef\'erons \`a ce dernier par des sigles tels que I~\Ref{I.9.7}
+qui signifie: S\'eminaire de G\'eom\'etrie Alg\'ebrique,
+expos\'e~I, \No9.7. Les num\'eros des expos\'es de 1961 suivront
+ceux de 1960. Nous r\'ef\'erons aux \'El\'ements de
+G\'eom\'etrie Alg\'ebrique de Dieudonn\'e-Grothendieck par des
+sigles tels que (EGA~I 8.7.3).
+
+Le pr\'esent expos\'e r\'esume (avec de l\'egers
+compl\'ements) les derniers expos\'es de 1960, qui n'avaient pas
+\'et\'e r\'edig\'es.
+
+Comme en 1961, nous nous limiterons en r\`egle g\'en\'erale
+\`a des pr\'esch\'emas localement noeth\'eriens, bien que
+souvent cette restriction soit inessentielle. Nous admettrons dans
+l'expos\'e \Ref{VI} la th\'eorie de la descente fid\`element plate,
+r\'esum\'ee dans S\'eminaire Bourbaki \No190. S'il y a lieu,
+nous en donnerons un expos\'e plus d\'etaill\'e dans un
+expos\'e ult\'erieur\footnote{\Cf Exp\ptbl \Ref{VI} et Exp\ptbl \Ref{VIII}}, une fois
+que le lecteur aura eu l'occasion de se convaincre de l'utilit\'e de
+cette technique, pour la th\'eorie du groupe fondamental.
+
+\section{Pr\'esch\'ema \`a groupe fini d'op\'erateurs,
+pr\'esch\'ema quotient}
+\label{V.1}
+
+Soient $X$ un pr\'esch\'ema, $G$ un groupe fini op\'erant sur~$X$ par automorphismes, \`a droite pour fixer les id\'ees. Si $X$
+est affine d'anneau $A$, $G$ op\`ere donc par automorphismes \`a
+gauche sur~$A$.
+
+Pour tout pr\'esch\'ema $Z$, $G$ op\`ere \`a gauche sur
+l'ensemble $\Hom(X,Z)$,
+% remark: un point ou point-virgule serait plus correct
+on peut donc consid\'erer l'ensemble
+$$
 \Hom(X,Z)^G
-$$           
-        </div>
+$$
+des morphismes invariants par $G$. Il d\'epend fonctoriellement de
+$Z$,
+% remark: idem (;)
+on peut se demander si ce foncteur est \og repr\'esentable\fg,
+\ie isomorphe \`a un foncteur $Z\mto\Hom(Y,Z)$.
+% page: 106
+\marginpar{106}
+%
+Cela signifie qu'on peut trouver un pr\'esch\'ema $Y$, et un
+morphisme invariant par $G$
+$$
+p\colon X\to Y
+$$
+tel que pour tout $Z$, l'application correspondante $g\mto gp$
+$$
+\Hom(Y,Z)\to \Hom(X,Z)^G
+$$
+soit bijective. On dit alors que $(Y,p)$ est un
+\emph{pr\'esch\'ema quotient}
+%
+\index{quotient (pr\'esch\'ema)|hyperpage}%
+%
+de~$X$
+\ifthenelse{\boolean{orig}}{par~$g$}{par~$G$}
+% correction: `g' should be `G'.
+(il est d\'etermin\'e \`a isomorphisme unique pr\`es).
+
+\begin{proposition}
+\label{V.1.1}
+Soient $A$ un anneau sur lequel le groupe fini $G$ op\`ere \`a
+gauche, $B=A^G$ le sous-anneau des invariants de~$A$, $X=\Spec(A)$ et
+$Y=\Spec(B)$, $p\colon X\to Y$ le morphisme canonique (\'evidemment
+invariant par $G$). Alors
+\begin{enumerate}
+\item[(i)] $A$ est entier sur~$B$ \ie $p$ est un morphisme
+\emph{entier}.
+\item[(ii)] Le morphisme $p$ est surjectif, ses fibres sont les
+trajectoires de~$G$, la topologie de~$Y$ est quotient de celle de~$X$.
+\item[(iii)] Soit $x\in X$, $y=p(x)$, $G_x$ le stabilisateur de~$x$, alors
+\ifthenelse{\boolean{orig}}
+{$\kappa(x)$ est une extension alg\'ebrique quasi-galoisienne de
+$\kappa(y)$ et l'application canonique de~$G_x$ dans le groupe
+$\Gal(\kappa(x)/\kappa(y))$ des $\kappa(y)$-automorphismes de
+$\kappa(x)$}
+{$\kres(x)$ est une extension alg\'ebrique quasi-galoisienne de
+$\kres(y)$ et l'application canonique de~$G_x$ dans le groupe
+$\Gal(\kres(x)/\kres(y))$ des $\kres(y)$-automorphismes de
+$\kres(x)$}
+est
+\ifthenelse{\boolean{orig}}{surjectif.}{surjective.}
+% correction: `surjectif' should be `surjective'.
+\item[(iv)] $(Y,p)$ est un pr\'esch\'ema quotient de~$X$ par $G$.
+\end{enumerate}
+\end{proposition}
+
+Les \'enonc\'es
+\ifthenelse{\boolean{orig}}
+{(i) (ii) (iii)}
+{(i), (ii), (iii)}
+sont bien connus en alg\`ebre
+commutative\footnote{\Cf N. Bourbaki, Alg. Comm. Chap\ptbl 5, \S 1 et \S
+2, th\ptbl 2.} et sont mis seulement pour m\'emoire, sauf l'assertion
+sur la topologie, qui provient du fait g\'en\'eral suivant,
+cons\'equence facile du th\'eor\`eme de Cohen-Seidenberg: un
+morphisme entier est ferm\'e (\ie transforme ferm\'es en
+ferm\'es). Notons tout de suite:
+
+\begin{corollaire}
+\label{V.1.2}
+Sous les conditions pr\'ec\'edentes, l'homomorphisme naturel
+$$\cal{O}_Y{\to} p_*(\cal{O}_X)^G$$ est un isomorphisme.
+\end{corollaire}
     </body>
 </html>
